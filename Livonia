@@ -1,0 +1,131 @@
+<!--Add below to mapGroupPos.xml  -->
+<!-- These are for Livonia -->
+	<group name="Static_Tent_GunRack" pos="3329.13417017966 487.498158 2030.48574649063" rpy="-0.000000 0 98.443753" a="-8.443755" />
+	<group name="Static_Tent_GunRack" pos="3857.24290614862 242.408848 10313.6127322836" rpy="1.036757 0.519451 47.305322" a="42.694678" />
+	<group name="Static_Tent_GunRack" pos="4282.42604195363 238.601033 10474.1111747068" rpy="-0.000000 0 138.955731" a="-48.955739" />
+	<group name="Static_Tent_GunRack" pos="6433.52467193738 175.173191 10991.6016150376" rpy="0.488619 -0.346555 -94.134097" a="-175.865887" />
+	<group name="Static_Tent_GunRack" pos="7641.04304 240.116169 6115.658295" rpy="-0.000000 0 4.3" a="85.7" />
+	<group name="Static_Tent_GunRack" pos="8467.9824887169 174.638295 11808.5532857904" rpy="1.007017 0.075847 -103.602222" a="-166.397763" />
+	<group name="Static_Tent_GunRack" pos="11118.3223617125 174.498677 11390.3355483302" rpy="-0.000000 0 -49.916694" a="139.91669" />
+	<group name="Static_Tent_GunRack" pos="11449.0406060032 330.11855 4534.88871164276" rpy="-0.000000 0 130.394833" a="-40.394841" />
+	<group name="Static_Tent_GunRack" pos="11515.0862554461 181.596165 9469.50414167398" rpy="-0.000000 0 -115.573299" a="-154.426694" />
+	<group name="Static_Tent_GunRack" pos="4298.396873 238.723819 10482.3444" rpy="-0.000000 0 -226.675863" a="-43.324122" />
+	<group name="Static_Tent_GunRack" pos="7415.02567 227.17752 6191.663349" rpy="-0.000000 0 14.853023" a="75.146974" />
+	
+<!--Add below to mapGroupProto.xml -->
+	
+	<group name="Static_Tent_GunRack" lootmax="1">
+		<container name="lootFloor" lootmax="1">
+		</container>
+		<dispatch>
+			<proxy type="AK101_Black" pos="0.310000 0.040000 0.315000" rpy="0 0 -90" />
+			<proxy type="CZ527_Green" pos="-0.310000 0.040000 0.315000" rpy="0 0 -90" />
+			<proxy type="Winchester70_Black" pos="-0.310000 0.040000 -0.230000" rpy="0 0 -90" />
+			<proxy type="SKS_Green" pos="0.310000 0.040000 -0.230000" rpy="0 0 -90" />
+		</dispatch>
+	</group>
+	
+	<!-- Edit/Add below to types.xml -->
+	<type name="AK101_Black"> <!-- Edit This Entry -->
+        <nominal>15</nominal>
+        <lifetime>28800</lifetime>
+        <restock>0</restock>
+        <min>5</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="RackWeapon"/>
+		<usage name="Racked"/>
+    </type>
+	
+	<type name="CZ527_Green"><!-- Add this -->
+        <nominal>15</nominal>
+        <lifetime>28800</lifetime>
+        <restock>0</restock>
+        <min>5</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="RackWeapon"/>
+		<usage name="Racked"/>
+	</type>
+	
+    <type name="Winchester70_Black"><!-- Add this -->
+        <nominal>15</nominal>
+        <lifetime>28800</lifetime>
+        <restock>0</restock>
+        <min>5</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="RackWeapon"/>
+		<usage name="Racked"/>
+    </type>
+	
+    <type name="SKS_Green"><!-- Add this -->
+        <nominal>15</nominal>
+        <lifetime>28800</lifetime>
+        <restock>0</restock>
+        <min>5</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="RackWeapon"/>
+		<usage name="Racked"/>
+    </type>
+	
+
+<!-- Add below to SpawnableTypes.xml if usiung the above weapons-->
+	<type name="SKS_Green">
+		<attachments chance="1.00">
+			<item name="PUScopeOptic" chance="0.50" />
+		</attachments>
+	</type>
+	<type name="Winchester70_Black">
+		<attachments chance="1.00">
+			<item name="HuntingOptic" chance="1.00" />
+		</attachments>
+	</type>
+	<type name="CZ527_Green">
+		<attachments chance="0.90">
+			<item name="HuntingOptic" chance="1.00" />
+		</attachments>
+		<attachments chance="0.30">
+			<item name="Mag_CZ527_5rnd" chance="1.00" />
+		</attachments>
+	</type>
+	<type name="AK101_Black">
+		<attachments chance="0.30">
+			<item name="AK_FoldingBttstck" chance="0.30" />
+		</attachments>
+		<attachments chance="0.30">
+			<item name="AK_WoodBttstck" chance="0.30" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="AK_PlasticBttstck" chance="1.00" />
+		</attachments>
+		<attachments chance="0.30">
+			<item name="AK_WoodHndgrd" chance="0.30" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="AK_PlasticHndgrd" chance="1.00" />
+		</attachments>
+		<attachments chance="0.30">
+			<item name="KashtanOptic" chance="0.50" />
+			<item name="PSO11Optic" chance="0.50" />
+		</attachments>
+		<attachments chance="0.30">
+			<item name="AK_Suppressor" chance="0.50" />
+		</attachments>
+		<attachments chance="0.30">
+			<item name="Mag_AK101_30Rnd" chance="0.50" />
+		</attachments>
+	</type>
+	
+<!-- Add these to  cfgLimitDefinitions.xml -->
+		<category name="RackWeapon"/>
+		<usage name="Racked"/>
